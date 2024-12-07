@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.*;
 class methodoverload
 {
 double add(int a,double b)
