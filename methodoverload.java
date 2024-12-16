@@ -1,22 +1,31 @@
-import java.*;
-class methodoverload
-{
-double add(int a,double b)
-{
-return a+b;
+import java.util.*;
+
+class Biotech {
+    void add(int a, int b) {
+        System.out.println("sum: " + (a + b));
+    }
 }
-double add (int a,double b,float c)
-{
-return a+b+c;
+
+class Computer extends Biotech {
+    void sub(int a, int b) {
+        System.out.println("sub: " + (a - b));
+    }
 }
-public static void main(String args[])
-{
-Scanner Scan = new Scanner(System.in);
-methodoverload method = new methodoverload();
-System.out.println("enter any number");
-int x = Scan.nextInt();
-double y = Scan.nextDouble();
-float z = Scan.nextFloat();
-System.out.println("sum:"+ method.add(x,y,z));
+
+class Civil extends Biotech {
+    void multi(int a, int b) {
+        System.out.println("multi: " + (a * b));
+    }
 }
+
+class Calculator {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        Computer cs = new Computer();
+        Civil eng = new Civil();
+        cs.add(a, b);
+        cs.sub(a, b);
+        eng.multi(a, b);
+    }
 }
